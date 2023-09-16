@@ -1,0 +1,15 @@
+.addUserForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+form label {
+  color: white;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+form input {
+  margin: 0 0 1rem 0;
+}
