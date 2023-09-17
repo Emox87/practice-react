@@ -4,11 +4,19 @@ import classes from "./AddUser.module.css";
 const AddUser = (props) => {
   const submitHandler = (e) => {
     e.preventDefault();
-    props.onAddUser({
-      username: e.target[0].value.toString(),
-      age: +e.target[1].value,
-    });
-    document.getElementById("addUserForm").reset();
+    if (
+      e.target[0].value.trim().length === 0 ||
+      e.target[1].value.lenght === 0
+    ) {
+      alert("Please insert some data!");
+      return;
+    } else {
+      props.onAddUser({
+        username: e.target[0].value.toString(),
+        age: +e.target[1].value,
+      });
+      document.getElementById("addUserForm").reset();
+    }
   };
 
   return (

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, Fragment } from "react";
 
 import Card from "./components/UI/Card/Card";
 import AddUser from "./components/User/AddUser";
@@ -13,23 +13,27 @@ const App = () => {
   };
 
   return (
-    <Card>
-      <AddUser onAddUser={onAddUser} />
-      {!users ? (
-        <p
-          style={{
-            textAlign: "center",
-            color: "white",
-            fontWeight: "bold",
-            fontSize: "1.2rem",
-          }}
-        >
-          No Users Found! Maybe add some?
-        </p>
-      ) : (
-        <UserList items={users} />
-      )}
-    </Card>
+    <Fragment>
+      <Card>
+        <AddUser onAddUser={onAddUser} />
+      </Card>
+      <Card>
+        {!users ? (
+          <p
+            style={{
+              textAlign: "center",
+              color: "white",
+              fontWeight: "bold",
+              fontSize: "1.2rem",
+            }}
+          >
+            No Users Found! Maybe add some?
+          </p>
+        ) : (
+          <UserList items={users} />
+        )}
+      </Card>
+    </Fragment>
   );
 };
 
