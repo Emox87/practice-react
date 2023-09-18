@@ -23,9 +23,7 @@ const App = () => {
 
   return (
     <Fragment>
-      <Card>
-        <AddUser onAddUser={onAddUser} />
-      </Card>
+      <AddUser onAddUser={onAddUser} />
       <Card>
         {!users ? (
           <p style={paraNoData}>No Users Found! Maybe add some?</p>
