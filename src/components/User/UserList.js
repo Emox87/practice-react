@@ -1,14 +1,12 @@
-import { Fragment } from "react";
-
 import User from "./User";
 
 const UserList = (props) => {
   return (
-    <Fragment>
+    <ul style={{ margin: 0, padding: 0 }}>
       {props.items.map((user) => (
         <User key={user.username} username={user.username} age={user.age} />
       ))}
-    </Fragment>
+    </ul>
   );
 };
 

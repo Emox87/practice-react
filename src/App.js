@@ -6,10 +6,19 @@ import UserList from "./components/User/UserList";
 
 const App = () => {
   const [users, setUsers] = useState("");
+
   const onAddUser = (user) => {
     setUsers((prevUsers) => {
       return [...prevUsers, user];
     });
+  };
+
+  // Paragraph Styles
+  const paraNoData = {
+    textAlign: "center",
+    color: "white",
+    fontWeight: "bold",
+    fontSize: "1.2rem",
   };
 
   return (
@@ -19,16 +28,7 @@ const App = () => {
       </Card>
       <Card>
         {!users ? (
-          <p
-            style={{
-              textAlign: "center",
-              color: "white",
-              fontWeight: "bold",
-              fontSize: "1.2rem",
-            }}
-          >
-            No Users Found! Maybe add some?
-          </p>
+          <p style={paraNoData}>No Users Found! Maybe add some?</p>
         ) : (
           <UserList items={users} />
         )}
