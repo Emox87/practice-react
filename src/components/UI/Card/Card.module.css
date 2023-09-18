@@ -1,7 +1,5 @@
 .card {
-  background-color: rgb(135, 131, 131);
-  width: 50rem;
-  min-width: 50rem;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   border-radius: 10px;
-  margin: 3rem auto;
 }
